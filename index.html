@@ -5,30 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FragLoot</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <nav>
-      <a class="navbar-list-unit">Shop</a>
+    <header>
+      <img src="img/logo.svg" alt="logo" />
+      <div>
+        <a class="header-list-unit">Shop</a>
 
-      <form>
-        <input type="search" placeholder="Search here..." />
-      </form>
+        <form>
+          <i
+            class="fa-solid fa-magnifying-glass"
+            style="color: rgb(139, 142, 153)"
+          ></i>
+          <input
+            type="search"
+            placeholder="Search for weapon models, keychains, bundles..."
+          />
+        </form>
+        <a class="header-list-unit">About</a>
+      </div>
 
-      <a class="navbar-list-unit">About</a>
-      
-    </nav>
+      <div>
+        <button>
+          <i class="fa-regular fa-user" style="color: rgb(139, 142, 153)"></i>
+
+          Sign in
+        </button>
+        <div id="shoping-cart">
+          <i
+            class="fa-solid fa-cart-shopping"
+            style="color: rgb(240, 240, 242)"
+          ></i>
+        </div>
+      </div>
+    </header>
 
     <section class="hero">
-      <h1 class="main">LEVEL UP YOUR SETUP</h1>
-
-      <p class="description">
-        Discover collectible gaming miniatures, keychains and desk display
-        pieces.
-      </p>
-
-      <button class="shopnow">Shop Now →</button>
-      <button class="view">View Bundles</button>
+      <article>
+        <span>
+          <i class="fa-regular fa-star" style="color: rgb(0, 212, 255)"></i>
+          CS2 Collectibles
+        </span>
+        <h1 class="upper-h1">Level Up</h1>
+        <h1 class="lower-h1">Your Setup</h1>
+        <p>Affordable CS2-inspired collectibles made for fans. Mini weapon models, keychains, and desk pieces that bring your favorite skins to life.</p>
+        <div>
+          <button class="shop-now-botton">Shop Now<i class="fa-solid fa-arrow-right" style="color: rgb(10, 11, 14);"></i></button>
+          <button class="view-bundles-botton">View Bundles</button>
+        </div>
+      </article>
+      <div class="hero-img"><img src="img/hero_section_img.svg" alt="hero_section_img"></div>
     </section>
 
     <section class="products">
@@ -156,26 +193,49 @@
       </div>
     </section>
 
-    <section class="store-features">
-      <div class="feature">
-        <h4>Fast Shipping</h4>
-        <p>Ships within 24 hours</p>
+    <footer>
+      <div>
+        <article>
+          <img src="img/logo.svg" alt="logo" />
+          <p>
+            Affordable CS2-inspired collectibles. Mini weapon models, keychains,
+            and desk pieces for fans.
+          </p>
+        </article>
+        <article>
+          <ul>
+            <li><h3>Shop</h3></li>
+            <li>All Products</li>
+            <li>New Arrivals</li>
+            <li>Best Sellers</li>
+            <li>Bundles</li>
+          </ul>
+        </article>
+        <article>
+          <ul>
+            <li><h3>Help</h3></li>
+            <li>Contact Us</li>
+            <li>Returns</li>
+            <li>FAQ/li></li>
+            <li>Contact Us</li>
+          </ul>
+        </article>
+        <article>
+          <ul>
+            <li><h3>Connect</h3></li>
+            <li>Discord: fragloot</li>
+            <li>IG: @fragloot</li>
+            <li>support@fragloot.gg</li>
+          </ul>
+        </article>
       </div>
-
-      <div class="feature">
-        <h4>Secure Checkout</h4>
-        <p>100% safe payment</p>
+      <hr />
+      <div class="footer-bottom">
+        <p>
+          © 2026 FRAGLOOT. All rights reserved. Not affiliated with Valve or
+          CS2.
+        </p>
       </div>
-
-      <div class="feature">
-        <h4>Easy Returns</h4>
-        <p>30-day return policy</p>
-      </div>
-
-      <div class="feature">
-        <h4>Affordable Prices</h4>
-        <p>Best value guaranteed</p>
-      </div>
-    </section>
+    </footer>
   </body>
 </html>
