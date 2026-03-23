@@ -94,6 +94,7 @@
       }
       .hero .lower-h1 {
         background: -webkit-linear-gradient(90deg, #00D4FF 0%, #00FFB2 100%);
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 57px;
