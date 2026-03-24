@@ -139,6 +139,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        box-shadow: -50px -50px 100px rgba(0, 212, 255, 0.1);
       }
       .hero .hero-img {
         width: 50%;
