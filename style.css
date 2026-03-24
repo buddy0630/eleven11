@@ -74,7 +74,7 @@
 
       .hero {
         display: flex;
-        background: #15171C;
+        background: radial-gradient(circle, rgba(0, 212, 255, 0.05) 0%,#15171C 100%); 
         height: fit-content;
         padding: 30px;
       }
@@ -117,17 +117,17 @@
         padding: 15px;
         min-width: 160px;
       }
-      .hero .shop-now-botton {
+      .hero .shop-now-button {
         background: #00D4FF;
         border:none ;
         color: #0A0B0E;
         font-weight: bold;
         font-size: 15px;
       }
-      .hero .shop-now-botton i {
+      .hero .shop-now-button i {
         margin-left: 10px;
       }
-      .hero .view-bundles-botton{
+      .hero .view-bundles-button{
         background: #1E2028;
         border: 1px solid #2E3140;
         color: #F0F0F2;
