@@ -6,6 +6,9 @@
         box-sizing: border-box;
         font-family: 'Inter', sans-serif;
       }
+      :root {
+        --color-grey:#8B8E99;
+      }
 
       body {
         background: #0b1220;
@@ -30,7 +33,7 @@
 
       }
       .nav-list-unit{
-        color:#8B8E99;
+        color:var(--color-grey);
       }
       nav button {
         background: #1e293b;
@@ -63,9 +66,9 @@
         padding-left: 15px;
         padding-right: 15px;
         border-radius: 18px;
-        border: 1px solid #8B8E99;
+        border: 1px solid var(--color-grey);
         background-color: #15171C;
-        color: #8B8E99;
+        color: var(--color-grey);
       }
     
     
@@ -81,7 +84,7 @@
       .hero span {
         color: #00D4FF;
         font-size: 13px;
-        padding: 6px 12px;
+        padding: 6px 12px;  
         background: rgba(0, 212, 255, 0.1);
         border-radius: 24px;
         border: 1px solid rgba(0, 212, 255, 0.3);
@@ -101,7 +104,7 @@
         font-weight:900;
       }
       .hero p {
-        color: #8B8E99;
+        color: var(--color-grey);
         font-size: 17px;
         font-weight:400;
         margin: 20px 0px;
@@ -147,14 +150,13 @@
         flex-direction: column;
         max-height: 50vh;
         
-      }
-      .hero div {
+      }    
+      .hero article div {
+        margin: 40px 0px;
         display: flex;
         gap: 10px;
       }
-      .hero article div {
-        margin: 40px 0px;
-      }
+      
      
       
 
@@ -317,7 +319,7 @@
         
       }
       footer article{
-        color: #8B8E99;
+        color: var(--color-grey);
         font-size: 13px;
         max-width: 25%;
         
@@ -342,7 +344,7 @@
         
       }
       footer p{
-        color: #8B8E99;
+        color: var(--color-grey);
         font-size: 13px;
         margin-top: 10px;
       }
