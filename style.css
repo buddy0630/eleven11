@@ -9,6 +9,7 @@
       :root {
         --text-secondary:#8B8E99;
         --primary:#00D4ff;
+        --background:var(#15171C);
       }
 
       body {
@@ -24,7 +25,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 20px 40px;
-        background: #15171C;
+        background: var(--background);
       }
       nav div {
         display: flex;
@@ -68,7 +69,7 @@
         padding-right: 15px;
         border-radius: 18px;
         border: 1px solid var(--text-secondary);
-        background-color: #15171C;
+        background-color: var(--background);
         color: var(--text-secondary);
       }
     
@@ -78,7 +79,7 @@
 
       .hero {
         display: flex;
-        background: radial-gradient(circle, rgba(0, 212, 255, 0.05) 0%,#15171C 100%); 
+        background: radial-gradient(circle, rgba(0, 212, 255, 0.05) 0%,var(--background) 100%); 
         height: fit-content;
         padding: 30px;
       }
