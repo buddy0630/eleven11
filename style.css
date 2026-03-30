@@ -10,8 +10,8 @@
         --text-secondary:#8B8E99;
         --primary:#00D4ff;
         --background:#15171C;
+        --secondary:#ff6a00;
       }
-
       body {
         background: #0b1220;
         color: white;
@@ -45,6 +45,7 @@
         padding-left: 3vmax;
         color: white;
       }
+      
       nav form i {
         position: absolute;
         margin:8px;
@@ -62,6 +63,14 @@
         border: 1px solid var(--text-secondary);
         background-color: var(--background);
         color: var(--text-secondary);
+        cursor: pointer;
+      }
+      nav a{
+        cursor: pointer;
+        text-decoration: none;
+      }
+      nav a:hover{
+        color: var(--primary);
       }
       /* HERO */
       .hero {
@@ -109,6 +118,7 @@
         border-radius: 16px;
         padding: 15px;
         min-width: 160px;
+        cursor: pointer;
       }
       .hero .shop-now-button {
         background: var(--primary);
@@ -126,6 +136,9 @@
         color: #F0F0F2;
         font-size: 15px;
         font-weight: 600;
+      }
+      .hero .view-bundles-button:hover{
+        background: var(--secondary);
       }
       .hero img {
         border-radius: 16px;
@@ -146,12 +159,7 @@
         display: flex;
         gap: 10px;
       }
-      
-     
-      
-
       /* FEATURED PRODUCTS */
-
       .products {
         padding: 50px;
         text-align: center;
@@ -236,7 +244,7 @@
       }
 
       .shop-btn {
-        background: #ff6a00;
+        background: var(--secondary);
         border: none;
         padding: 6px 12px;
         border-radius: 6px;
@@ -251,11 +259,11 @@
         margin: 40px;
         padding: 40px;
         border-radius: 16px;
-        background: linear-gradient(90deg, #ff6a00, #0ea5e9);
+        background: linear-gradient(90deg, var(--secondary), #0ea5e9);
       }
 
       .tag {
-        background: #ff6a00;
+        background: var(--secondary);
         padding: 4px 10px;
         border-radius: 6px;
         font-size: 12px;
