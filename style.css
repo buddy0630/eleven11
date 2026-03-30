@@ -9,7 +9,7 @@
       :root {
         --text-secondary:#8B8E99;
         --primary:#00D4ff;
-        --background:var(#15171C);
+        --background:#15171C;
       }
 
       body {
@@ -32,20 +32,10 @@
         justify-content: center;
         align-items: center;
         gap: 10px;
-
       }
       .nav-list-unit{
         color:var(--text-secondary);
       }
-      nav button {
-        background: #1e293b;
-        border: none;
-        color: white;
-        padding: 8px 16px;
-        border-radius: 6px;
-        cursor: pointer;
-      }
-
       nav input {
         padding: 8px;
         border-radius: 18px;
@@ -53,6 +43,7 @@
         background-color: #252830;
         width: 30vmax;
         padding-left: 3vmax;
+        color: white;
       }
       nav form i {
         position: absolute;
@@ -72,11 +63,7 @@
         background-color: var(--background);
         color: var(--text-secondary);
       }
-    
-    
-
       /* HERO */
-
       .hero {
         display: flex;
         background: radial-gradient(circle, rgba(0, 212, 255, 0.05) 0%,var(--background) 100%); 
@@ -84,6 +71,7 @@
         padding: 30px;
       }
       .hero span {
+        display: flex;
         color: var(--primary);
         font-size: 13px;
         padding: 6px 12px;  
