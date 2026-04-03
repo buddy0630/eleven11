@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FragLoot</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <main>
+     <!--------------navigation bar section----------------->
+    <nav>
+      <img src="img/logo.svg" alt="logo" />
+      <div>
+        <a class="nav-list-unit">Shop</a>
+
+        <form>
+          <i
+            class="fa-solid fa-magnifying-glass"
+            style="color: rgb(139, 142, 153)"
+          ></i>
+          <input
+            type="search"
+            placeholder="Search for weapon models, keychains, bundles..."
+          />
+        </form>
+        <a class="nav-list-unit">About</a>
+      </div>
+
+      <div>
+        <button>
+          <i class="fa-regular fa-user" style="color: rgb(139, 142, 153)"></i>
+
+          Sign in
+        </button>
+        <div id="shoping-cart">
+          <i
+            class="fa-solid fa-cart-shopping"
+            style="color: rgb(240, 240, 242)"
+          ></i>
+        </div>
+      </div>
+    </nav>
+         <!--------------hero  section----------------->
+    <section class="hero">
+      
+      <article>
+        <span>
+          <i class="fa-regular fa-star" style="color: rgb(0, 212, 255)"></i>
+          CS2 Collectibles
+        </span>
+        <h1 class="upper-h1">Level Up</h1>
+        <h1 class="lower-h1">Your Setup</h1>
+        <p>Affordable CS2-inspired collectibles made for fans. Mini weapon models, keychains, and desk pieces that bring your favorite skins to life.</p>
+        <div>
+          <button class="shop-now-button">Shop Now<i class="fa-solid fa-arrow-right" style="color: rgb(10, 11, 14);"></i></button>
+          <button class="view-bundles-button">View Bundles</button>
+        </div>
+      </article>
+      <div class="hero-img"><img src="img/hero_section_img.svg" alt="hero_section_img"></div>
+      
+    </section>
+         <!--------------products section----------------->
+    <section class="product-section">
+      <div class="section-header">
+        <div>
+            <p class="fan-favorites">FAN FAVORITES</p>
+            <h2>Featured Products</h2>
+        </div>
+        <a href="#" class="view-all">View All ❯</a>
+      </div>
+
+      <div class="product-grid">          
+        <article class="product-card">
+          <figure class="card-image">      
+            <img src="https://picsum.photos/200/300?11" alt="AK-47 Neon Rider Mini Model">
+            <span class="badge purple">Best Seller</span>
+          </figure>
+            <div class="card-body">
+                <h3 class="product-name">AK-47 Neon Rider Mini Model</h3>
+                <div class="stars">★★★★☆ <span class="review-count">(342)</span></div>
+                <div class="bottom">
+                  <span class="price">₮34,990</span> 
+                  <button class="add-btn">+ Add</button>
+                </div>                
+            </div>
+        </article>
+        <article class="product-card">
+          <figure class="card-image">                    
+            <img src="https://picsum.photos/200/300?9" alt="AWP Dragon Lore">
+            <span class="badge orange">Hot</span>
+            <span class="badge red">-20%</span>
+          </figure>
+            <div class="card-body">
+                <h3 class="product-name">AWP Dragon Lore</h3>
+                <div class="stars">★★★★☆ <span class="review-count">(189)</span></div>
+                <div class="bottom">
+                  <span class="price">₮54,990</span>
+                  <span class="old-price">₮69,990</span>
+                  <button class="add-btn">+ Add</button>
+                </div>                
+            </div>
+        </article>
+
+        <article class="product-card">
+          <figure class="card-image">                    
+            <img src="https://picsum.photos/200/300?8" alt="Karambit Fade Keychain">
+            <span class="badge purple">Best Seller</span>
+          </figure>
+            <div class="card-body">
+                <h3 class="product-name">Karambit Fade Keychain</h3>
+                <div class="stars">★★★★☆ <span class="review-count">(891)</span></div>
+                <div class="bottom">
+                  <span class="price">₮39,990</span>
+                  <button class="add-btn">+ Add</button>
+                </div>                
+            </div>
+        </article>
+
+        <article class="product-card">
+          <figure class="card-image">                    
+            <img src="https://picsum.photos/200/300?5" alt="Butterfly Gamma Doppler">
+            <span class="badge orange">Hot</span>
+            <span class="badge red">-12%</span>
+          </figure>
+            <div class="card-body">
+                <h3 class="product-name">Butterfly Gamma Doppler</h3>
+                <div class="stars">★★★★☆ <span class="review-count">(156)</span></div>
+                <div class="bottom">
+                  <span class="price">₮34,990</span>
+                  <span class="old-price">₮39,990</span>
+                  <button class="add-btn">+ Add</button>
+                </div>                
+            </div>
+        </article>
+
+      </div>
+    </section>
+         <!--------------categories section----------------->
+    <section class="categories">
+      <p class="subtitle">BROWSE BY TYPE</p>
+      <h2>Categories</h2>
+
+      <div class="category-container">
+        <div class="category-card">
+          <img src="https://picsum.photos/300/200?5" />
+          <div class="overlay">
+            <h3>Mini Weapon Models</h3>
+            <button class="shop-btn">Shop now →</button>
+          </div>
+        </div>
+
+        <div class="category-card">
+          <img src="https://picsum.photos/300/200?6" />
+          <div class="overlay">
+            <h3>Keychains</h3>
+            <button class="shop-btn">Shop now →</button>
+          </div>
+        </div>
+
+        <div class="category-card">
+          <img src="https://picsum.photos/300/200?7" />
+          <div class="overlay">
+            <h3>Desk Display Pieces</h3>
+            <button class="shop-btn">Shop now →</button>
+          </div>
+        </div>
+
+        <div class="category-card">
+          <img src="https://picsum.photos/300/200?8" />
+          <div class="overlay">
+            <h3>Bundles</h3>
+            <button class="shop-btn">Shop now →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--------------promo-banner section----------------->
+    <section class="promo-banner">
+      <span class="tag">SAVE 30%</span>
+
+      <h2>Bundle Up & Save Big</h2>
+
+      <p>
+        Grab one of our curated bundles and get up to 30% off. Perfect for
+        starting your collection or gifting a CS2 fan.
+      </p>
+
+      <br />
+
+      <button class="shop-btn">Shop Bundles →</button>
+    </section>
+    <!--------------best-sellers section----------------->
+    <section class="product-section">
+      <div class="section-header">
+        <div>
+            <p class="most-popular">MOST POPULAR</p>
+            <h2>Best Sellers</h2>
+        </div>
+        <a href="#" class="view-all">View All ❯</a>
+      </div>
+
+      <div class="product-grid">          
+        <article class="product-card">
+          <figure class="card-image">                    
+            <img src="https://picsum.photos/200/300?11" alt="AK-47 Neon Rider Mini Model">
+            <span class="badge purple">Best Seller</span>
+          </figure>
+            <div class="card-body">
+                <h3 class="product-name">AK-47 Neon Rider Mini Model</h3>
+                <div class="stars">★★★★☆ <span class="review-count">(342)</span></div>
+                <div class="bottom">
+                  <span class="price">₮34,990</span> 
+                  <button class="add-btn">+ Add</button>
+                </div>                
+            </div>
+        </article>
+
+        <article class="product-card">
+          <figure class="card-image">                    
+            <img src="https://picsum.photos/200/300?8" alt="Karambit Fade Keychain">
+            <span class="badge purple">Best Seller</span>
+          </figure>
+            <div class="card-body">
+                <h3 class="product-name">Karambit Fade Keychain</h3>
+                <div class="stars">★★★★☆ <span class="review-count">(891)</span></div>
+                <div class="bottom">
+                  <span class="price">₮39,990</span>
+                  <button class="add-btn">+ Add</button>
+                </div>                
+            </div>
+        </article>
+
+        <article class="product-card">
+          <figure class="card-image">                    
+            <img src="https://picsum.photos/200/300?1" alt="Karambit Fade Keychain">
+            <span class="badge purple">Best Seller</span>
+          </figure>
+            <div class="card-body">
+                <h3 class="product-name">CT/T Agent Figure set</h3>
+                <div class="stars">★★★★☆ <span class="review-count">(891)</span></div>
+                <div class="bottom">
+                  <span class="price">₮39,990</span>
+                  <button class="add-btn">+ Add</button>
+                </div>                
+            </div>
+        </article>
+
+        <article class="product-card">
+          <figure class="card-image">                    
+            <img src="https://picsum.photos/200/300?2" alt="Butterfly Gamma Doppler">
+            <span class="badge purple">Best Seller</span>
+            <span class="badge red">-31%</span>
+          </figure>
+            <div class="card-body">
+                <h3 class="product-name">Keychain Starter Pack </h3>
+                <div class="stars">★★★★☆ <span class="review-count">(156)</span></div>
+                <div class="bottom">
+                  <span class="price">₮44,950</span>
+                  <span class="old-price">₮64,950</span>
+                  <button class="add-btn">+ Add</button>
+                </div>                
+            </div>
+        </article>
+
+      </div>
+    </section>        
+    <!--------------footer section----------------->
+    <footer>
+      <div>
+        <article>
+          <img src="img/logo.svg" alt="logo" />
+          <p>
+            Affordable CS2-inspired collectibles. Mini weapon models, keychains,
+            and desk pieces for fans.
+          </p>
+        </article>
+        <article>
+          <ul>
+            <li><h3>Shop</h3></li>
+            <li>All Products</li>
+            <li>New Arrivals</li>
+            <li>Best Sellers</li>
+            <li>Bundles</li>
+          </ul>
+        </article>
+        <article>
+          <ul>
+            <li><h3>Help</h3></li>
+            <li>Contact Us</li>
+            <li>Returns</li>
+            <li>FAQ</li>
+          </ul>
+        </article>
+        <article>
+          <ul>
+            <li><h3>Connect</h3></li>
+            <li>Discord: fragloot</li>
+            <li>IG: @fragloot</li>
+            <li>support@fragloot.gg</li>
+          </ul>
+        </article>
+      </div>
+      <hr />
+      <div class="footer-bottom">
+        <p>
+          © 2026 FRAGLOOT. All rights reserved. Not affiliated with Valve or
+          CS2.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
