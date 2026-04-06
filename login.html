@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --text-secondary:#8B8E99;
+  --primary:#00D4ff;
+  --background: #0b1220;
+  --card-bg: #131926;
+}
+
+body {
+  background: var(--background);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  width: 100%;
+  border-bottom: 2px solid rgba(46, 49, 64, 0.5);
+  background: var(--background);
+
+  img {
+    height: 40px; 
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    a.nav-list-unit {
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 500;
+      padding: 8px 12px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+
+    form {
+      position: relative; 
+      i.fa-magnifying-glass {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        color: rgb(139, 142, 153);
+      }
+      input {
+        padding: 8px 8px 8px 30px; 
+        border-radius: 18px;
+        border: none;
+        background-color: #252830;
+        color: white;
+        width: 30vmax;
+
+        &::placeholder {
+          color: rgb(139, 142, 153);
+        }
+      }
+    }
+
+    button {
+      background: #1e293b;
+      border: 1px solid var(--text-secondary);
+      color: var(--text-secondary);
+      padding: 8px 15px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      i {
+        color: rgb(139, 142, 153);
+      }
+      &:hover {
+        background: #2a3345;
+      }
+    }
+    #shoping-cart {
+      background-color: #252830;
+      border-radius: 18px;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i {
+        color: rgb(240, 240, 242);
+      }
+    }
+  }
+}
+i.fa-gamepad {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;       
+  font-size: 30px;
+  color: white;
+  background-color: rgb(36, 115, 7);
+  margin-top: 40px;
+}
+.join{
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+p{
+  color: var(--text-secondary);
+  font: 15px 'Inter', sans-serif;
+}
+form.login {
+  max-width: 40%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border: 1px solid #2e3140;
+  background: var(--card-bg);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 12px;
+  label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    &[for="first"],
+    &[for="last"] {
+      width: calc(50% - 8px);
+    }
+    input {
+      height: 35px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: none;
+      background-color: #1a2133;
+      color: rgb(20, 12, 12);
+      padding-left: 10px;
+      &::placeholder {
+        color: #aaa;
+      }
+      &:hover {
+        background-color: #c7ccd4;
+      }
+    }
+  }
+  h6 {
+    width: 100%;
+    text-align: center;
+    color: var(--text-secondary);
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+  }
+  .hadacc {
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      margin-top: 1.5rem;
+    }
+  }
+  button {
+    border-radius: 8px;
+    cursor: pointer;
+    &.createb {
+      width: 100%;
+      padding: 10px;
+      background: var(--primary);
+      border: none;
+      color: black;
+      font-weight: bold;
+      &:hover {
+        background: #08b347;
+      }
+    }
+    &.google,
+    &.github {
+      width: calc(50% - 8px);
+      padding: 10px;
+      border: none;
+      color: white;
+      background-color: #1a2133;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+
+      i {
+        margin-right: 8px;
+      }
+
+      &:hover {
+        background: #08b347;
+      }
+    }
+  }
+  .divider {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    color: #666;
+    margin: 10px 0;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 1px;
+      background: #444;
+    }
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: 0;
+    }
+  }
+}
+footer {
+  margin-top: 50px;
+  width: 100%;
+  padding: 30px;
+  border-top: 1px solid black;
+  background: rgba(30, 32, 40, 0.5);
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+  article {
+    color: var(--text-secondary);
+    font-size: 13px;
+    max-width: 25%;
+  }
+  h3 {
+    color: #F0F0F2;
+  }
+  ul {
+    list-style: none;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  p {
+    color: var(--text-secondary);
+    font-size: 13px;
+  }
+  .footer-bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    padding: 5px 3px;
+    flex-wrap: wrap;
+  }
+  nav img {
+    height: 10px;
+  }
+  form.login label[for="first"],
+  form.login label[for="last"] {
+    width: 100%;
+  }
+  form.login button.google,
+  form.login button.github {
+    width: 100%;
+  }
+  footer > div {
+    flex-direction: column;
+    gap: 20px;
+  }
+  footer article {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+    <nav>
+      <img src="img/logo.svg" alt="logo" />
+      <div>
+        <a class="nav-list-unit">Shop</a>
+
+        <form>
+          <i
+            class="fa-solid fa-magnifying-glass"
+            style="color: rgb(139, 142, 153)"
+          ></i>
+          <input
+            type="search"
+            placeholder="Search for weapon models, keychains, bundles..."
+          />
+        </form>
+        <a class="nav-list-unit">About</a>
+      </div>
+
+      <div>
+        <button>
+          <i class="fa-regular fa-user" style="color: rgb(139, 142, 153)"></i>
+
+          Sign in
+        </button>
+        <div id="shoping-cart">
+          <i
+            class="fa-solid fa-cart-shopping"
+            style="color: rgb(240, 240, 242)"
+          ></i>
+        </div>
+      </div>
+    </nav>
+<i class="fa-solid fa-gamepad"></i>
+<section class="join">
+  <h2 class="fhalf">Welcome back</h2>
+</section>
+<p>Sign in to your FRAGLOOT account</p>
+<form class="login">
+
+  <label for="email">Email*
+    <input type="email" placeholder="Email*" id="email">
+  </label>
+
+  <label for="password">Password*
+    <input type="password" placeholder="Password*" id="password">
+  </label>
+
+
+  <button class="createb">Sign In →</button>
+
+  <div class="divider">or CONTINUE with</div>
+
+  <button class="google"><i class="fa-brands fa-google"></i>Google</button>
+  <button class="github"><i class="fa-brands fa-github"></i>Github</button>
+
+</form>
+<p class="hadacc">Don't have an account? <a href="signup.html">Create one free</a></p>
+    <footer>
+      <div>
+        <article>
+          <img src="img/logo.svg" alt="logo" />
+          <p>
+            Affordable CS2-inspired collectibles. Mini weapon models, keychains,
+            and desk pieces for fans.
+          </p>
+        </article>
+        <article>
+          <ul>
+            <li><h3>Shop</h3></li>
+            <li>All Products</li>
+            <li>New Arrivals</li>
+            <li>Best Sellers</li>
+            <li>Bundles</li>
+          </ul>
+        </article>
+        <article>
+          <ul>
+            <li><h3>Help</h3></li>
+            <li>Contact Us</li>
+            <li>Returns</li>
+            <li>FAQ/li></li>
+            <li>Contact Us</li>
+          </ul>
+        </article>
+        <article>
+          <ul>
+            <li><h3>Connect</h3></li>
+            <li>Discord: fragloot</li>
+            <li>IG: @fragloot</li>
+            <li>support@fragloot.gg</li>
+          </ul>
+        </article>
+      </div>
+      <hr />
+      <div class="footer-bottom">
+        <p>
+          © 2026 FRAGLOOT. All rights reserved. Not affiliated with Valve or
+          CS2.
+        </p>
+      </div>
+    </footer>
+
+</body>
+</html>
