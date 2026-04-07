@@ -279,9 +279,9 @@
 
       .bottom .old-price {
         padding-right: 100px;
-        color: var(--text-gray);
+        color: gray;
         text-decoration: line-through;
-        font-size: 12px;
+        font-size: 13px;
       }
 
       .bottom .add-btn {
