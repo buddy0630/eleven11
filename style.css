@@ -173,6 +173,7 @@
       }
 
       .fan-favorites {
+        display: flex;
         color: #f97316;
         font-size: 12px;
         font-weight: 600;
@@ -180,7 +181,7 @@
       }
 
       .section-header h2 {
-        margin: 5px 0px 0px ;
+        margin: 5px 0px 5px;
         font-size: 28px;
         font-weight: 900;
       }
@@ -211,17 +212,23 @@
 
       .card-image img {
         width: 100%;
+        aspect-ratio: 1/0.9;
         border-radius: 15px;
       }
 
       .card-image .badge {
         position: relative;
+        display: flex;
+        top: -270px;
+        right: -10px;
         color: white;
         font-size: 0.7rem;
         font-weight: 700;
         padding: 4px 10px;
         border-radius: 40px;
         letter-spacing: 0.5px;
+        width: fit-content;
+        margin: 5px;
       }
 
       .badge.purple {
@@ -237,14 +244,16 @@
       }
 
       .product-name {
+        display: flex;
         margin: 10px 0px 5px;
         font-size: 16px;
         font-weight: 600;
       }
 
       .stars {
+        display: flex;
         color: #fbbf24;
-        font-size: 13px;
+        font-size: 14px;
         margin-bottom: 16px;
       }
       
@@ -261,14 +270,15 @@
       }
 
       .bottom .price {
-        font-size: 16px;
+        font-size: 18px;
         font-weight: bold;
       }
 
       .bottom .old-price {
+        padding-right: 100px;
         color: var(--text-gray);
         text-decoration: line-through;
-        font-size: 14px;
+        font-size: 12px;
       }
 
       .bottom .add-btn {
@@ -391,6 +401,7 @@
 
       /* BEST SELLERS */
       .most-popular {
+        display: flex;
         color: #8b5cf6;
         font-size: 12px;
         font-weight: 600;
