@@ -346,6 +346,10 @@
         border-radius: 10px;
         overflow: hidden;
         cursor: pointer;
+        animation: fadeUp 0.6s ease;
+      }
+      section.categories > article:hover{
+        transform: translateY(-5px);
       }
 
       section.categories > article img {
