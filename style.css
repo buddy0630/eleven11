@@ -416,7 +416,7 @@
         color: white;
         cursor: pointer;
       }
-      .pfooter{
+      footer:not(.categories footer){
         padding: 30px;
         border-top: 1px solid black;
         background: rgba(30, 32, 40, 0.5);
