@@ -1,0 +1,107 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+      }
+      :root {
+        --text-secondary:#8B8E99;
+        --primary:#00D4ff;
+        --background:#15171C;
+        --secondary:#ff6a00;
+      }
+      body {
+        background: #0b1220;
+        color: white;
+      }
+      .main-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        padding:30px;
+      }
+      .main-container article {
+        display: flex;
+        justify-content: space-between;
+
+      }
+      .main-container article div {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+
+      }
+      .main-container article div h1 {
+        font-size: 28px;
+        color:#F0F0F2;
+        font-weight: 800;
+      }
+      .main-container article div p {
+        font-size: 15px;
+        color:#8B8E99;
+        font-weight: 500;
+      }
+      .main-container div {
+        display: flex;
+        justify-content: space-between;
+      }
+      .main-container article button {
+        background: var(--primary);
+        border:none ;
+        color: #0A0B0E;
+        font-weight: bold;
+        font-size: 14px;
+        border-radius: 16px;
+        min-width: 150px;
+        cursor: pointer;
+      }
+      .main-container article button i {
+        margin-right: 10px;
+      }
+      .main-container .statuses {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0px;
+      }
+      .main-container .statuses article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid #2E3140;
+        border-radius: 16px;
+        background-color:#1E2028;
+        width: 24%;
+        padding: 20px;
+        height: 150px;
+      }
+      .main-container .statuses article div {
+        width: 40px;
+        height: 40px;
+        border-radius: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+      .main-container .statuses article h1{
+        font-size: 22px;
+        font-weight: 800;
+        color:#F0F0F2 ;
+      }
+      .main-container .statuses article p{
+        font-size: 13px;
+        font-weight:400 ;
+        color: #8B8E99;
+      }
+      #box-icon {
+        background-color: rgba((0,212,255,0.1));
+      }
+      #correct-icon {
+        background-color:rgba((16,185,129,0.1));
+      }
+      #dollar-icon {
+        background-color:rgba((255,107,44,0.1)) ;
+      }
+      #up-trending-icon {
+        background-color: rgba((168,85,247,0.1));
+      }

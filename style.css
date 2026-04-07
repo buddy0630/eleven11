@@ -16,9 +16,7 @@
         background: #0b1220;
         color: white;
       }
-
       /* nav */
-
       nav{
         display: flex;
         border-bottom: 2px solid rgba(46, 49, 64, 0.5);
@@ -159,6 +157,8 @@
         display: flex;
         gap: 10px;
       }
+
+      
       /* FEATURED PRODUCTS */
       .product-section {
         padding: 50px 40px;
@@ -209,7 +209,9 @@
       .product-card:hover {
         transform: translateY(-5px);
       }
-
+      .card-image {
+        position: relative;
+      }
       .card-image img {
         width: 100%;
         aspect-ratio: 1/0.9;
@@ -217,10 +219,10 @@
       }
 
       .card-image .badge {
-        position: relative;
+        position: absolute;
         display: flex;
-        top: -270px;
-        right: -10px;
+        inset-block-start: 10px;
+        inset-inline-start: 10px;
         color: white;
         font-size: 0.7rem;
         font-weight: 700;
@@ -241,6 +243,7 @@
 
       .badge.red {
         background: #ef4444;
+        inset-block-start: 40px;
       }
 
       .product-name {
