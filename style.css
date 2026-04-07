@@ -163,6 +163,7 @@
       .product-section {
         padding: 50px 40px;
         text-align: center;
+        width: 100%;
       }
 
       .section-header {
@@ -194,16 +195,19 @@
       }
 
       .product-grid {
-        display:flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
       }
 
       .product-card {
         background: #1e293b;
         border-radius: 15px;
-        transition: 0.3s;
-        padding: 15px;
-        width: 23%;
+        overflow: hidden;
+        transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+        cursor: pointer;
+        position: relative;
+        animation: fadeUp 0.6s ease;
       }
 
       .product-card:hover {
@@ -245,6 +249,9 @@
         background: #ef4444;
         inset-block-start: 40px;
       }
+      .card-body {
+        padding: 16px;
+      }
 
       .product-name {
         display: flex;
@@ -270,6 +277,8 @@
         justify-content: space-between;
         align-items: center;
         margin-top: 10px;
+        gap: 8px;
+        flex-wrap: wrap;
       }
 
       .bottom .price {
@@ -285,11 +294,20 @@
       }
 
       .bottom .add-btn {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: #000;
         background: #22d3ee;
-        border: none;
         padding: 8px 14px;
         border-radius: 20px;
+        border: none;
+        font-size: 13px;
+        font-weight: 600;
         cursor: pointer;
+        white-space: nowrap;
+        transition: background 0.18s ease, transform 0.15s ease;
+        flex-shrink: 0;
       }
 
       /* CATEGORIES */
