@@ -283,15 +283,14 @@
       /* FEATURED PRODUCTS */
       .product-section {
         padding: 50px 40px;
-        text-align: center;
         width: 100%;
       }
 
       .section-header {
         display: flex;
+        align-items: flex-end;
         justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 28px;
       }
 
       .fan-favorites {
@@ -309,6 +308,8 @@
       }
 
       .view-all {
+        display: flex;
+        align-items: center;
         color: #38bdf8;
         font-size: 14px;
         font-weight: 500;
