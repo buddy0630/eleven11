@@ -104,8 +104,7 @@
         padding: 30px;
         border-top: 1px solid black;
         background: rgba(30, 32, 40, 0.5);
-        
-      }
+    }
 
     footer article{
         color: var(--text-secondary);
