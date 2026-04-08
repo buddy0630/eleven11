@@ -252,6 +252,11 @@
       .card-body {
         padding: 16px;
       }
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start
+      }
 
       .product-name {
         display: flex;
