@@ -15,13 +15,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <script type="module" src="js/main.js" defer></script>
   </head>
 
   <body>
     <!--------------navigation bar section----------------->
     <header>
       <nav class="desktop-nav" aria-label="Primary navigation">
-      <img src="img/logo.svg" alt="FragLoot logo" />
+      <a href="home.html"><img src="img/logo.svg" alt="FragLoot logo" /></a>
       <div>
         <a class="nav-list-unit" href="shop.html">Shop</a>
 
@@ -40,7 +41,7 @@
       </div>
 
       <div>
-        <button type="button">
+        <button type="button" onclick="location.href='login.html'">
           <i class="fa-regular fa-user" style="color: rgb(139, 142, 153)"></i>
 
           Sign in
@@ -99,126 +100,57 @@
       
     </section>
          <!--------------products section----------------->
-    <section class="product-section">
-      <div class="section-header">
-        <div>
-            <p class="fan-favorites">FAN FAVORITES</p>
-            <h2>Featured Products</h2>
-        </div>
-        <a href="#" class="view-all">View All ❯</a>
+  <section class="product-section">
+    <div class="section-header">
+      <div>
+        <p>FAN FAVORITES</p>
+        <h2>Featured Products</h2>
       </div>
+    </div>
 
-      <div class="product-grid">          
-        <article class="product-card">
-          <figure class="card-image">                    
-            <img src="https://picsum.photos/200/300?11" alt="AK-47 Neon Rider Mini Model">
-            <span class="badge purple">Best Seller</span>
-          </figure>
-            <div class="card-body">
-                <h3 class="product-name">AK-47 Neon Rider Mini Model</h3>
-                <div class="stars">★★★★☆ 
-                  <span class="review-count">(342)</span>
-                </div>
-                <div class="bottom">
-                  <span class="price">₮34,990</span> 
-                  <button class="add-btn">+ Add</button>
-                </div>                
-            </div>
-        </article>
-        <article class="product-card">
-          <figure class="card-image">                    
-            <img src="https://picsum.photos/200/300?11" alt="AWP Dragon Lore">
-            <span class="badge orange">Hot</span>
-            <span class="badge red">-20%</span>
-          </figure>
-            <div class="card-body">
-                <h3 class="product-name">AWP Dragon Lore</h3>
-                <div class="stars">★★★★☆ 
-                  <span class="review-count">(189)</span>
-                </div>
-                <div class="bottom">
-                  <span class="price">₮54,990</span>
-                  <span class="old-price">₮69,990</span>
-                  <button class="add-btn">+ Add</button>
-                </div>                
-            </div>
-        </article>
-
-        <article class="product-card">
-          <figure class="card-image">                    
-            <img src="https://picsum.photos/200/300?11" alt="Karambit Fade Keychain">
-            <span class="badge purple">Best Seller</span>
-          </figure>
-            <div class="card-body">
-                <h3 class="product-name">Karambit Fade Keychain</h3>
-                <div class="stars">★★★★☆ 
-                  <span class="review-count">(891)</span>
-                </div>
-                <div class="bottom">
-                  <span class="price">₮39,990</span>
-                  <button class="add-btn">+ Add</button>
-                </div>                
-            </div>
-        </article>
-
-        <article class="product-card">
-          <figure class="card-image">                    
-            <img src="https://picsum.photos/200/300?11" alt="Butterfly Gamma Doppler">
-            <span class="badge orange">Hot</span>
-            <span class="badge red">-12%</span>
-          </figure>
-            <div class="card-body">
-                <h3 class="product-name">Butterfly Gamma Doppler</h3>
-                <div class="stars">★★★★☆ 
-                  <span class="review-count">(156)</span>
-                </div>
-                <div class="bottom">
-                    <span class="price">₮34,990</span>
-                    <span class="old-price">₮39,990</span>
-                  <button class="add-btn">+ Add</button>
-                </div>                
-            </div>
-        </article>
-
-      </div>
-    </section>
-         <!--------------categories section----------------->
-  <section class="categories">
-    <p class="subtitle">BROWSE BY TYPE</p>
-    <h2>Categories</h2>
-
-    <article>
-      <img src="https://picsum.photos/400/220?random=5" alt="Mini Weapon Models" />
-      <footer>
-        <h3>Mini Weapon Models</h3>
-        <button>Shop now-></button>
-      </footer>
-    </article>
-
-    <article >
-      <img src="https://picsum.photos/400/220?random=6" alt="Keychains" />
-      <footer>
-        <h3>Keychains</h3>
-        <button>Shop now-></button>
-      </footer>
-    </article>
-
-    <article>
-      <img src="https://picsum.photos/400/220?random=7" alt="Desk Display Pieces" />
-      <footer>
-        <h3>Desk Display Pieces</h3>
-        <button>Shop now-></button>
-      </footer>
-    </article>
-
-    <article>
-      <img src="https://picsum.photos/400/220?random=8" alt="Bundles" />
-      <footer>
-        <h3>Bundles</h3>
-        <button>Shop now-></button>
-      </footer>
-    </article>
+    <!-- JS fills this -->
+    <div class="product-grid" id="featured-products"></div>
   </section>
+
+         <!--------------categories section----------------->
+<section class="categories">
+
+  <p class="subtitle">BROWSE BY TYPE</p>
+  <h2>Categories</h2>
+
+  <article data-category="mini-weapons">
+    <img src="" alt="Mini Weapon Models" />
+    <footer>
+      <h3>Mini Weapon Models</h3>
+      <button>Shop now →</button>
+    </footer>
+  </article>
+
+  <article data-category="keychain">
+    <img src="" alt="Keychains" />
+    <footer>
+      <h3>Keychains</h3>
+      <button>Shop now →</button>
+    </footer>
+  </article>
+
+  <article data-category="desktop-figure">
+    <img src="" alt="Desk Display Pieces" />
+    <footer>
+      <h3>Desk Display Pieces</h3>
+      <button>Shop now →</button>
+    </footer>
+  </article>
+
+  <article data-category="bundles">
+    <img src="" alt="Bundles" />
+    <footer>
+      <h3>Bundles</h3>
+      <button>Shop now →</button>
+    </footer>
+  </article>
+
+</section>
     <!--------------promo-banner section----------------->
     <section class="promo-banner">
       <span class="tag">SAVE 30%</span>
@@ -235,88 +167,9 @@
       <button class="shop-btn">Shop Bundles →</button>
     </section>
     <!--------------best-sellers section----------------->
-    <section class="product-section">
-      <div class="section-header">
-        <div>
-            <p class="most-popular">MOST POPULAR</p>
-            <h2>Best Sellers</h2>
-        </div>
-        <a href="#" class="view-all">View All ❯</a>
-      </div>
-
-      <div class="product-grid">          
-        <article class="product-card">
-          <figure class="card-image">                    
-            <img src="https://picsum.photos/200/300?11" alt="AK-47 Neon Rider Mini Model">
-            <span class="badge purple">Best Seller</span>
-          </figure>
-            <div class="card-body">
-                <h3 class="product-name">AK-47 Neon Rider Mini Model</h3>
-                <div class="stars">★★★★☆ 
-                  <span class="review-count">(342)</span>
-                </div>
-                <div class="bottom">
-                  <span class="price">₮34,990</span> 
-                  <button class="add-btn">+ Add</button>
-                </div>                
-            </div>
-        </article>
-
-        <article class="product-card">
-          <figure class="card-image">                    
-            <img src="https://picsum.photos/200/300?8" alt="Karambit Fade Keychain">
-            <span class="badge purple">Best Seller</span>
-          </figure>
-            <div class="card-body">
-                <h3 class="product-name">Karambit Fade Keychain</h3>
-                <div class="stars">★★★★☆ 
-                  <span class="review-count">(891)</span>
-                </div>
-                <div class="bottom">
-                  <span class="price">₮39,990</span>
-                  <button class="add-btn">+ Add</button>
-                </div>                
-            </div>
-        </article>
-
-        <article class="product-card">
-          <figure class="card-image">                    
-            <img src="https://picsum.photos/200/300?1" alt="Karambit Fade Keychain">
-            <span class="badge purple">Best Seller</span>
-          </figure>
-            <div class="card-body">
-                <h3 class="product-name">CT/T Agent Figure set</h3>
-                <div class="stars">★★★★☆ 
-                  <span class="review-count">(891)</span>
-                </div>
-                <div class="bottom">
-                  <span class="price">₮39,990</span>
-                  <button class="add-btn">+ Add</button>
-                </div>                
-            </div>
-        </article>
-
-        <article class="product-card">
-          <figure class="card-image">                    
-            <img src="https://picsum.photos/200/300?2" alt="Butterfly Gamma Doppler">
-            <span class="badge purple">Best Seller</span>
-            <span class="badge red">-31%</span>
-          </figure>
-            <div class="card-body">
-                <h3 class="product-name">Keychain Starter Pack </h3>
-                <div class="stars">★★★★☆ 
-                  <span class="review-count">(156)</span>
-                </div>
-                <div class="bottom">
-                  <span class="price">₮44,950</span>
-                  <span class="old-price">₮64,950</span>
-                  <button class="add-btn">+ Add</button>
-                </div>                
-            </div>
-        </article>
-
-      </div>
-    </section>
+<div class="product-grid" id="best-sellers">
+  <!-- JS will generate products here -->
+</div>
     </main>
 
     <!--------------footer section----------------->

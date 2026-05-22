@@ -315,7 +315,7 @@ footer {
 <body>
 
     <nav>
-      <img src="img/logo.svg" alt="logo" />
+      <a href="home.html"><img src="img/logo.svg" alt="logo" /></a>
       <div>
         <a class="nav-list-unit">Shop</a>
 
@@ -416,5 +416,25 @@ footer {
       </div>
     </footer>
 
+<script>
+  document.querySelector('.createb').addEventListener('click', e => {
+    e.preventDefault();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+    if (!email || !password) {
+      alert('Please fill in all fields.');
+      return;
+    }
+    location.href = 'home.html';
+  });
+  document.querySelector('.google').addEventListener('click', e => {
+    e.preventDefault();
+    alert('Google sign-in coming soon.');
+  });
+  document.querySelector('.github').addEventListener('click', e => {
+    e.preventDefault();
+    alert('GitHub sign-in coming soon.');
+  });
+</script>
 </body>
 </html>

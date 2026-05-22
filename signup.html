@@ -324,7 +324,7 @@ footer {
 <body>
 
     <nav>
-      <img src="img/logo.svg" alt="logo" />
+      <a href="home.html"><img src="img/logo.svg" alt="logo" /></a>
       <div>
         <a class="nav-list-unit">Shop</a>
 
@@ -395,7 +395,7 @@ footer {
   <button class="github"><i class="fa-brands fa-github"></i>Github</button>
 
 </form>
-<p class="hadacc">Already have an account? <a href="#">Sign in</a></p>
+<p class="hadacc">Already have an account? <a href="login.html">Sign in</a></p>
     <footer>
       <div>
         <article>
@@ -441,5 +441,32 @@ footer {
       </div>
     </footer>
 
+<script>
+  document.querySelector('.createb').addEventListener('click', e => {
+    e.preventDefault();
+    const first = document.getElementById('first').value.trim();
+    const last = document.getElementById('last').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+    const confirm = document.getElementById('confirm-password').value;
+    if (!first || !last || !email || !password) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+    if (password !== confirm) {
+      alert('Passwords do not match.');
+      return;
+    }
+    location.href = 'login.html';
+  });
+  document.querySelector('.google').addEventListener('click', e => {
+    e.preventDefault();
+    alert('Google sign-up coming soon.');
+  });
+  document.querySelector('.github').addEventListener('click', e => {
+    e.preventDefault();
+    alert('GitHub sign-up coming soon.');
+  });
+</script>
 </body>
 </html>
