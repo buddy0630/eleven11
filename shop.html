@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="js/shop.js" type="module"></script>
+<link rel="stylesheet" href="shop-style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="home.html"><img src="img\logo.svg" alt="FragLoot logo" /></a>
+      <div>
+        <a class="nav-list-unit" href="shop.html">Shop</a>
+
+        <form role="search">
+          <i
+            class="fa-solid fa-magnifying-glass"
+            style="color: rgb(139, 142, 153)"
+          ></i>
+          <input
+            type="search"
+            aria-label="Search products"
+            placeholder="Search for weapon models, keychains, bundles..."
+          />
+        </form>
+        <a class="nav-list-unit" href="about.html">About</a>
+      </div>
+
+      <div>
+        <button type="button" onclick="location.href='login.html'">
+          <i class="fa-regular fa-user" style="color: rgb(139, 142, 153)"></i>
+
+          Sign in
+        </button>
+        <a id="shoping-cart" href="card.html" aria-label="Shopping cart">
+          <i
+            class="fa-solid fa-cart-shopping"
+            style="color: rgb(240, 240, 242)"
+          ></i>
+        </a>
+      </div>
+    </nav>
+
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="home.html">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+      <a href="shop.html">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>Shop</span>
+      </a>
+      <a href="#">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Search</span>
+      </a>
+      <a href="card.html">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>Cart</span>
+      </a>
+      <a href="login.html">
+        <i class="fa-regular fa-user"></i>
+        <span>Me</span>
+      </a>
+    </nav>
+    </header>
+
+
+<article class="search-input">
+
+
+  <h2>Shop</h2>
+    <div class="search-bar">
+      <form>
+        <input type="text" placeholder="Search for products" />
+      </form>
+      <button>Search</button>
+    </div>
+
+    <ul class="category">
+      <li><button class="active">All</button></li>
+      <li><button>Mini Weapon Models</button></li>
+      <li><button>Keychains</button></li>
+      <li><button>Desk Display Pieces</button></li>
+      <li><button>Bundles</button></li>
+    </ul>
+</article>
+  <section class="div">
+    <article class="lefty">
+      <nav class="filter">
+        <h2>Filters</h2>
+        <h6>Price Range</h6>
+        <div class="price-range">
+          <input type="number" placeholder="Min" min="10000" max="1000000000" />
+          <span>—</span>
+          <input type="number" placeholder="Max" min="10000" max="1000000000" />
+        </div>
+        <h6>PRODUCT STATUS</h6>
+        <ul class="status">
+          <li><button class="active">All</button></li>
+          <li><button>New Arrivals</button></li>
+          <li><button>Hot</button></li>
+          <li><button>Best Sellers</button></li>
+          <li><button>In stock only</button></li>
+        </ul>
+      </nav>
+    </article>
+
+    <section class="products">
+        <ul></ul>
+        <div class="pagination">
+          <button class="page-btn">&#8592; Prev</button>
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">Next &#8594;</button>
+        </div>
+      </section>
+    </section>
+<footer>
+      <section class="footer-columns">
+        <article>
+          <img src="img/logo.svg" alt="logo" />
+          <p>Affordable CS2-inspired collectibles. Mini weapon models, keychains, and desk pieces for fans.</p>
+        </article>
+        <article>
+          <ul>
+            <li><h3>Shop</h3></li>
+            <li>All Products</li>
+            <li>New Arrivals</li>
+            <li>Best Sellers</li>
+            <li>Bundles</li>
+          </ul>
+        </article>
+        <article>
+          <ul>
+            <li><h3>Help</h3></li>
+            <li>Shipping Info</li>
+            <li>Returns</li>
+            <li>FAQ</li>
+            <li>Contact Us</li>
+          </ul>
+        </article>
+        <article>
+          <ul>
+            <li><h3>Connect</h3></li>
+            <li>Discord: fragloot</li>
+            <li>IG: @fragloot</li>
+            <li>support@fragloot.gg</li>
+          </ul>
+        </article>
+      </section>
+      <hr />
+      <p class="footer-bottom">© 2026 FRAGLOOT. All rights reserved. Not affiliated with Valve or CS2.</p>
+    </footer>
+</body>
+</html>
