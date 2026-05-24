@@ -322,6 +322,10 @@
         gap: 16px;
       }
 
+      #best-sellers {
+        padding: 50px 40px;
+      }
+
       .product-card {
         background: #1e293b;
         border-radius: 15px;

@@ -315,7 +315,7 @@ footer {
 <body>
 
     <nav>
-      <img src="img/logo.svg" alt="logo" />
+      <a href="home.html"><img src="img/logo.svg" alt="logo" /></a>
       <div>
         <a class="nav-list-unit">Shop</a>
 
@@ -416,5 +416,39 @@ footer {
       </div>
     </footer>
 
+<script type="module">
+  import { login } from './js/api.js';
+
+  document.querySelector('.createb').addEventListener('click', async e => {
+    e.preventDefault();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+    if (!email || !password) {
+      alert('Please fill in all fields.');
+      return;
+    }
+    const data = await login(email, password);
+    if (data.error) {
+      alert(data.error);
+      return;
+    }
+    localStorage.setItem('token', data.token);
+    localStorage.setItem('user', JSON.stringify(data.user));
+    if (data.user.role === 'admin') {
+      location.href = 'admin.html';
+    } else {
+      location.href = 'home.html';
+    }
+  });
+
+  document.querySelector('.google').addEventListener('click', e => {
+    e.preventDefault();
+    alert('Google sign-in coming soon.');
+  });
+  document.querySelector('.github').addEventListener('click', e => {
+    e.preventDefault();
+    alert('GitHub sign-in coming soon.');
+  });
+</script>
 </body>
 </html>

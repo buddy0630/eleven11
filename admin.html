@@ -6,6 +6,7 @@
     <title>FragLoot</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="admin.css" />
+    <script type="module" src="js/admin.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -21,7 +22,7 @@
   <body>
      <!--------------navigation bar section----------------->
     <nav>
-      <img src="img/logo.svg" alt="logo" />
+      <a href="home.html"><img src="img/logo.svg" alt="logo" /></a>
       <div>
         <a class="nav-list-unit" href="shop.html">Shop</a>
 
@@ -39,16 +40,12 @@
       </div>
 
       <div>
-        <button>
+        <button id="auth-btn" onclick="location.href='login.html'">
           <i class="fa-regular fa-user" style="color: rgb(139, 142, 153)"></i>
-
           Sign in
         </button>
-        <div id="shoping-cart">
-          <i
-            class="fa-solid fa-cart-shopping"
-            style="color: rgb(240, 240, 242)"
-          ></i>
+        <div id="shoping-cart" style="background:#1a2133;border-radius:20px;padding:8px 14px;display:flex;align-items:center;gap:6px;color:#00D4FF;font-size:13px;font-weight:600;">
+          <i class="fa-solid fa-shield-halved"></i> Admin Panel
         </div>
       </div>
     </nav>
