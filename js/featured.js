@@ -27,7 +27,7 @@ export function renderFeatured(products) {
           <div class="bottom">
             <span class="price">₮${product.price.toLocaleString()}</span>
            ${product.discount > 0 ? `<span class="old-price">₮${Math.round((product.price*100) /(100-product.discount )).toLocaleString()}</span>` : ''}
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" data-id="${product.id}">+ Add</button>
           </div>
         </div>
       </article>

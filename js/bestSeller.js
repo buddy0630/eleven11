@@ -32,7 +32,7 @@ export function renderBestSellers(products) {
           <div class="bottom">
             <span class="price">₮${p.price.toLocaleString()}</span>
            ${p.discount > 0 ? `<span class="old-price">₮${oldPrice.toLocaleString()}</span>` : ''}
-            <button class="add-btn">+ Add</button>
+            <button class="add-btn" data-id="${p.id}">+ Add</button>
           </div>
         </div>
       </article>

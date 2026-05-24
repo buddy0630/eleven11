@@ -416,8 +416,10 @@ footer {
       </div>
     </footer>
 
-<script>
-  document.querySelector('.createb').addEventListener('click', e => {
+<script type="module">
+  import { login } from './js/api.js';
+
+  document.querySelector('.createb').addEventListener('click', async e => {
     e.preventDefault();
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value;
@@ -425,8 +427,20 @@ footer {
       alert('Please fill in all fields.');
       return;
     }
-    location.href = 'home.html';
+    const data = await login(email, password);
+    if (data.error) {
+      alert(data.error);
+      return;
+    }
+    localStorage.setItem('token', data.token);
+    localStorage.setItem('user', JSON.stringify(data.user));
+    if (data.user.role === 'admin') {
+      location.href = 'admin.html';
+    } else {
+      location.href = 'home.html';
+    }
   });
+
   document.querySelector('.google').addEventListener('click', e => {
     e.preventDefault();
     alert('Google sign-in coming soon.');

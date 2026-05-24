@@ -1,4 +1,31 @@
-import { getProducts } from './api.js';
+import { getProducts, getUser, logout, setupAuthButton } from './api.js';
+
+setupAuthButton();
+const user = getUser();
+
+if (user?.role === 'admin') {
+  const cart = document.getElementById('shoping-cart');
+  if (cart) {
+    cart.outerHTML = `<a href="admin.html" style="background:#1a2133;border-radius:20px;padding:8px 14px;display:flex;align-items:center;gap:6px;text-decoration:none;color:#00D4FF;font-size:13px;font-weight:600;">
+      <i class="fa-solid fa-shield-halved"></i> Admin
+    </a>`;
+  }
+}
+
+function getCart() {
+  return JSON.parse(localStorage.getItem('cart') || '[]');
+}
+
+function addToCart(id) {
+  const cart = getCart();
+  const existing = cart.find(item => item.id === id);
+  if (existing) {
+    existing.qty++;
+  } else {
+    cart.push({ id, qty: 1 });
+  }
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
 
 const productsPerPage = 4;
 let currentPage = 1;
@@ -63,6 +90,17 @@ function createCard(product) {
       </div>
     </div>
   `;
+  const addBtn = card.querySelector('.add-btn');
+  if (user?.role === 'admin') {
+    addBtn.style.display = 'none';
+  } else {
+    addBtn.addEventListener('click', () => {
+      addToCart(product.id);
+      addBtn.textContent = '✓ Added';
+      setTimeout(() => { addBtn.textContent = '+ Add'; }, 1000);
+    });
+  }
+
   return card;
 }
 
@@ -158,6 +196,7 @@ document.querySelector('.search-bar button')?.addEventListener('click', () => {
 });
 searchInput?.addEventListener('keydown', e => {
   if (e.key === 'Enter') {
+    e.preventDefault();
     filters.search = searchInput.value.trim();
     applyFilters();
   }
@@ -166,14 +205,23 @@ searchInput?.addEventListener('keydown', e => {
 getProducts().then(products => {
   allProducts = products;
 
+  const params = new URLSearchParams(location.search);
+
   // Pre-select category from URL param (e.g. shop.html?category=bundles)
-  const urlCategory = new URLSearchParams(location.search).get('category');
+  const urlCategory = params.get('category');
   if (urlCategory) {
     filters.category = urlCategory;
     document.querySelectorAll('.category button').forEach(btn => {
       btn.classList.remove('active');
       if (categoryMap[btn.textContent] === urlCategory) btn.classList.add('active');
     });
+  }
+
+  // Pre-fill search from URL param (e.g. shop.html?search=knife)
+  const urlSearch = params.get('search');
+  if (urlSearch) {
+    filters.search = urlSearch;
+    if (searchInput) searchInput.value = urlSearch;
   }
 
   showPage(currentPage);

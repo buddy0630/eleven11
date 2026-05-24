@@ -441,15 +441,17 @@ footer {
       </div>
     </footer>
 
-<script>
-  document.querySelector('.createb').addEventListener('click', e => {
+<script type="module">
+  import { signup } from './js/api.js';
+
+  document.querySelector('.createb').addEventListener('click', async e => {
     e.preventDefault();
-    const first = document.getElementById('first').value.trim();
-    const last = document.getElementById('last').value.trim();
+    const first_name = document.getElementById('first').value.trim();
+    const last_name = document.getElementById('last').value.trim();
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value;
     const confirm = document.getElementById('confirm-password').value;
-    if (!first || !last || !email || !password) {
+    if (!first_name || !last_name || !email || !password) {
       alert('Please fill in all required fields.');
       return;
     }
@@ -457,8 +459,15 @@ footer {
       alert('Passwords do not match.');
       return;
     }
+    const data = await signup(first_name, last_name, email, password);
+    if (data.error) {
+      alert(data.error);
+      return;
+    }
+    alert('Account created! Please sign in.');
     location.href = 'login.html';
   });
+
   document.querySelector('.google').addEventListener('click', e => {
     e.preventDefault();
     alert('Google sign-up coming soon.');
